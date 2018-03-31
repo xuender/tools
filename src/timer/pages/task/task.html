@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="cancel()" clear>
+        取消
+      </button>
+    </ion-buttons>
+    <ion-title>{{ task.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="ok()" clear>
+        确定
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label fixed>名称</ion-label>
+    <ion-input type="text" [(ngModel)]="task.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>时间</ion-label>
+    <ion-select [(ngModel)]="minute">
+      <ion-option *ngFor="let n of range(121)" [value]="n">{{ n }} 分钟</ion-option>
+    </ion-select>
+    <ion-select [(ngModel)]="second">
+      <ion-option *ngFor="let n of range(60)" [value]="n">{{ n }} 秒钟</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

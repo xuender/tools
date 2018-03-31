@@ -11,6 +11,7 @@ import { ServicePage } from '../pages/service/service'
 import { InfoPage } from '../pages/info/info'
 import { SettingsPage } from '../pages/settings/settings'
 
+import { TimerModule } from '../timer/timer.module'
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +25,10 @@ import { SettingsPage } from '../pages/settings/settings'
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    TimerModule,
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '后退',
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +44,7 @@ import { SettingsPage } from '../pages/settings/settings'
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
 export class AppModule { }

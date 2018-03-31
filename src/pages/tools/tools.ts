@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ToolsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TimerPage } from '../../timer/pages/timer/timer'
 
 @Component({
   selector: 'page-tools',
@@ -21,4 +16,7 @@ export class ToolsPage {
     console.log('ionViewDidLoad ToolsPage');
   }
 
+  timer() {
+    this.navCtrl.push(TimerPage)
+  }
 }

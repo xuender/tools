@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="cancel()" clear>
+        取消
+      </button>
+    </ion-buttons>
+    <ion-title>{{ loop.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="ok()" clear>
+        确定
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label fixed>名称</ion-label>
+    <ion-input type="text" [(ngModel)]="loop.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>循环位置(0开始)</ion-label>
+    <ion-input type="number" [(ngModel)]="loop.to"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>循环次数</ion-label>
+    <ion-input type="number" [(ngModel)]="loop.count"></ion-input>
+  </ion-item>
+</ion-content>

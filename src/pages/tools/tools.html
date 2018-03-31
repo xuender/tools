@@ -1,9 +1,38 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>工具</ion-title>
+    <ion-title>
+      <ion-icon name="hammer"></ion-icon>
+      工具
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <button (click)="timer()" ion-item>
+      <ion-icon name="stopwatch" item-start></ion-icon>
+      计时器
+      <ion-badge item-end>测试</ion-badge>
+    </button>
+    <button ion-item>
+      <ion-icon name="qr-scanner" item-start></ion-icon>
+      扫码
+      <ion-badge color="danger" item-end>待续</ion-badge>
+    </button>
+    <button ion-item>
+      <ion-icon name="apps" item-start></ion-icon>
+      生成QR码
+      <ion-badge color="danger" item-end>待续</ion-badge>
+    </button>
+    <button ion-item>
+      <ion-icon name="megaphone" item-start></ion-icon>
+      音效
+      <ion-badge color="danger" item-end>待续</ion-badge>
+    </button>
+    <button ion-item>
+      <ion-icon name="notifications" item-start></ion-icon>
+      报警
+      <ion-badge color="danger" item-end>待续</ion-badge>
+    </button>
+  </ion-list>
 </ion-content>

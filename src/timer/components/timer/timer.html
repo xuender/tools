@@ -1,0 +1,40 @@
+<ion-list>
+  <ion-item-sliding *ngFor="let i of plan.items; index as x" #slidingItem>
+    <ion-item>
+      <ion-badge *ngIf="!i.count" item-start [color]="i.succeed ? 'secondary' : ''">{{ x + 1 }}</ion-badge>
+      <ion-icon *ngIf="i.count" name="refresh-circle" [color]="i.succeed ? 'secondary' : 'primary'" item-left></ion-icon>
+      {{ i.name }}
+      <ion-badge *ngIf="i.count" item-end>{{ i.count - i.num }}</ion-badge>
+      <ion-badge *ngIf="i.time" item-end>{{ i.time - i.num | time }}</ion-badge>
+    </ion-item>
+    <ion-item-options side="right">
+      <button (click)="removeItem(i, slidingItem)" ion-button color="danger">
+        <ion-icon name="trash"></ion-icon>
+        删除
+      </button>
+      <button (click)="updateItem(i, slidingItem)" ion-button color="primary">
+        <ion-icon name="build"></ion-icon>
+        编辑
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  <ion-list-header class="center">
+    {{ time | time:"准备开始" }}
+  </ion-list-header>
+  <button *ngIf="ifPlay" (click)="play()" icon-left ion-button large block>
+    <ion-icon name="play"></ion-icon>
+    开始
+  </button>
+  <button *ngIf="ifRun" (click)="run()" icon-left ion-button color="secondary" large block>
+    <ion-icon name="play"></ion-icon>
+    继续
+  </button>
+  <button *ngIf="ifPause" (click)="pause()" icon-left ion-button color="secondary" large block>
+    <ion-icon name="pause"></ion-icon>
+    暂停
+  </button>
+  <button *ngIf="ifStop" (click)="stop()" icon-left ion-button color="danger" large block>
+    <ion-icon name="square"></ion-icon>
+    停止
+  </button>
+</ion-list>

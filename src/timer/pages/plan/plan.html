@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar [hideBackButton]="isRun">
+    <button ion-button menuToggle [disabled]="isRun">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ plan.name }}{{ plan.parent ? '/'+plan.parent.name : '' }}</ion-title>
+    <ion-buttons end>
+      <button ion-button [disabled]="isRun" (click)="add()">
+        <ion-icon name="add"></ion-icon>
+        增加
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="ifPlan">
+    <ion-item-sliding *ngFor="let p of plan.plans" #slidingItem>
+      <button ion-item menuClose (click)="openPlan(p)">
+        <ion-icon name="stopwatch" item-start></ion-icon>
+        {{ p.name }}
+        <ion-badge item-end>{{ time(p) | time }}</ion-badge>
+      </button>
+      <ion-item-options side="right">
+        <button (click)="removePlan(p, slidingItem)" ion-button color="danger">
+          <ion-icon name="trash"></ion-icon>
+          删除
+        </button>
+        <button (click)="updatePlan(p, slidingItem)" color="primary" ion-button>
+          <ion-icon name="build"></ion-icon>
+          编辑
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <timer *ngIf="ifItem" [plan]="plan" (run)="changeRun($event)"></timer>
+</ion-content>
