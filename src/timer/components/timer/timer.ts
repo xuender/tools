@@ -23,9 +23,10 @@ export class TimerComponent {
   ifStop = false
   ifCancel = true
   ifRun = false
-  _plan: Plan;
-
   time = 0
+
+  private _plan: Plan
+  private tplan: Plan
   private timer
   constructor(
     private planProvider: PlanProvider,
@@ -35,6 +36,7 @@ export class TimerComponent {
   }
 
   @Input() set plan(p: Plan) {
+    this.tplan = p
     this._plan = Object.assign({}, p)
     this.init()
   }
@@ -80,6 +82,9 @@ export class TimerComponent {
       }
       if (end) {
         this.stop()
+        this.tplan.tally = this.tplan.tally ? this.tplan.tally + 1 : 1
+        console.log('save', this.plan.tally)
+        this.planProvider.save()
       }
     }, 1000)
     this.bgProvider.vibrate(100)
@@ -131,6 +136,7 @@ export class TimerComponent {
     this.time = 0
     this.init()
     this.bgProvider.vibrate(100)
+    console.log('sotp 完毕')
   }
 
   updateItem(item: Item, slidingItem: ItemSliding) {

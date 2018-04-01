@@ -19,6 +19,7 @@
       <button ion-item menuClose (click)="openPlan(p)">
         <ion-icon name="stopwatch" item-start></ion-icon>
         {{ p.name }}
+        <ion-badge color="secondary">{{ p.tally }}</ion-badge>
         <ion-badge item-end>{{ time(p) | time }}</ion-badge>
       </button>
       <ion-item-options side="right">

@@ -25,6 +25,10 @@ export interface Plan {
    * 定时项目
    */
   items?: Array<Item>
+  /**
+   * 次数
+   */
+  tally?: number;
 }
 
 /**
