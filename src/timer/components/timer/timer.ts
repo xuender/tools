@@ -7,6 +7,7 @@ import { Loop } from '../../loop'
 import { Item, isLoop } from '../../item'
 import { Task } from '../../task'
 import { PlanProvider } from '../../providers/plan/plan';
+import { SoundProvider } from '../../../sound/providers/sound/sound';
 
 /**
  * 计时器
@@ -26,7 +27,10 @@ export class TimerComponent {
 
   time = 0
   private timer
-  constructor(private planProvider: PlanProvider) {
+  constructor(
+    private planProvider: PlanProvider,
+    private soundProvider: SoundProvider,
+  ) {
     console.log('Hello TimerComponent Component');
   }
 
@@ -77,6 +81,7 @@ export class TimerComponent {
         this.stop()
       }
     }, 1000)
+    this.soundProvider.vib(100)
   }
 
   loop(l: Loop) {
@@ -97,6 +102,12 @@ export class TimerComponent {
     t.num += 1
     if (t.num >= t.time) {
       t.succeed = true
+      if (t.vibration) {
+        this.soundProvider.vib(t.vibration)
+      }
+      if (t.sound) {
+        this.soundProvider.play(t.sound)
+      }
     }
   }
 
@@ -104,6 +115,7 @@ export class TimerComponent {
     this.ifRun = true
     this.ifPause = false
     if (this.timer) { clearInterval(this.timer) }
+    this.soundProvider.vib(100)
   }
 
   stop() {
@@ -116,6 +128,7 @@ export class TimerComponent {
     if (this.timer) { clearInterval(this.timer) }
     this.time = 0
     this.init()
+    this.soundProvider.vib(100)
   }
 
   updateItem(item: Item, slidingItem: ItemSliding) {

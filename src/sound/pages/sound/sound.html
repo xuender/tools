@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-icon name="megaphone"></ion-icon>
+      音效
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let s of sounds" (click)="play(s)" [disabled]="s.isPlay">
+      <ion-icon name="megaphone" item-start></ion-icon>
+      {{ s.name }}
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,4 +1,17 @@
 [{
+    "name": "测试",
+    "items": [{
+      "name": "3秒",
+      "sound": "ding",
+      "vibration": 200,
+      "time": 3
+    }, {
+      "name": "循环",
+      "count": 3,
+      "to": 0
+    }]
+  },
+  {
     "name": "爱上跑步的13周(1-6 基础训练)",
     "plans": [{
         "name": "第一周 步伐",
@@ -6,10 +19,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -23,10 +40,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -40,10 +61,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -61,10 +86,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -78,10 +107,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -95,10 +128,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -116,10 +153,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -133,10 +174,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -150,10 +195,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -171,10 +220,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -188,10 +241,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
@@ -205,10 +262,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
@@ -225,10 +286,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -242,10 +307,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -259,10 +328,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -280,10 +353,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -297,10 +374,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -314,10 +395,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -339,10 +424,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步6分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 360
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -356,10 +445,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -373,10 +466,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -394,10 +491,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -411,10 +512,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -428,10 +533,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步2分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 120
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -449,10 +558,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步6分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 360
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -466,10 +579,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -483,10 +600,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -504,10 +625,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步8分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 480
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -521,10 +646,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -538,10 +667,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -558,10 +691,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -575,10 +712,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -592,10 +733,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -613,10 +758,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步8分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 480
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -630,10 +779,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -647,10 +800,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -668,10 +825,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -685,10 +846,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -702,6 +867,8 @@
             "name": "第三课",
             "items": [{
               "name": "10公里",
+              "sound": "ding",
+              "vibration": 200,
               "time": 3600
             }]
           }
@@ -710,17 +877,21 @@
     ]
   },
   {
-    "name": "爱上跑步的13周(7-13 强换训练)",
+    "name": "爱上跑步的13周(7-13 强化训练)",
     "plans": [{
         "name": "第七周 训练过了一半",
         "plans": [{
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -734,10 +905,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步4分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 240
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -751,10 +926,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -772,10 +951,14 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -789,10 +972,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步3分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 180
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -806,10 +993,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -827,30 +1018,44 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步15分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 900
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步20分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1200
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               }
             ]
@@ -859,10 +1064,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步5分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 300
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -876,10 +1085,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -897,22 +1110,32 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步20分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1200
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步30分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1800
               }
             ]
@@ -921,10 +1144,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -938,22 +1165,32 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步20分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1200
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步15分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 900
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               }
             ]
@@ -965,14 +1202,20 @@
             "name": "第一课",
             "items": [{
                 "name": "跑步40分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 2400
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步20分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1200
               }
             ]
@@ -981,10 +1224,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -998,22 +1245,32 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步20分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 1200
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步15分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 900
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               }
             ]
@@ -1026,6 +1283,8 @@
             "name": "第一课",
             "items": [{
               "name": "跑步50分钟",
+              "sound": "ding",
+              "vibration": 200,
               "time": 3000
             }]
           },
@@ -1033,10 +1292,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -1050,10 +1313,14 @@
             "name": "第三课",
             "items": [{
                 "name": "跑步15分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 900
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -1063,6 +1330,8 @@
               },
               {
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               }
             ]
@@ -1074,6 +1343,8 @@
             "name": "第一课",
             "items": [{
               "name": "跑步40分钟",
+              "sound": "ding",
+              "vibration": 200,
               "time": 2400
             }]
           },
@@ -1081,10 +1352,14 @@
             "name": "第二课",
             "items": [{
                 "name": "跑步10分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 600
               },
               {
                 "name": "行走1分钟",
+                "sound": "ding",
+                "vibration": 200,
                 "time": 60
               },
               {
@@ -1098,6 +1373,8 @@
             "name": "第三课",
             "items": [{
               "name": "10公里",
+              "sound": "ding",
+              "vibration": 200,
               "time": 3600
             }]
           }

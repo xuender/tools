@@ -12,6 +12,7 @@ import { InfoPage } from '../pages/info/info'
 import { SettingsPage } from '../pages/settings/settings'
 
 import { TimerModule } from '../timer/timer.module'
+import { SoundModule } from '../sound/sound.module'
 @NgModule({
   declarations: [
     MyApp,
@@ -26,6 +27,7 @@ import { TimerModule } from '../timer/timer.module'
   imports: [
     BrowserModule,
     TimerModule,
+    SoundModule,
     IonicModule.forRoot(MyApp, {
       backButtonText: '后退',
     }),

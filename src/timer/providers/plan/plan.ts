@@ -38,7 +38,7 @@ export class PlanProvider {
     }
   }
 
-  private save() {
+  save() {
     this.storage.set('plans', this.plans)
   }
 
@@ -126,10 +126,13 @@ export class PlanProvider {
     })
   }
 
-  async add(plan: Plan): Promise<Plan> {
+  async add(plan: Plan, isRoot = false): Promise<Plan> {
     if (plan.plans && plan.plans.length > 0) {
       const p = await this.createPlan()
       addPlan(plan, p)
+      if (isRoot) {
+        this.plans.push(p)
+      }
       this.save()
       return p
     } else {

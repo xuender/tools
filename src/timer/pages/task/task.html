@@ -21,11 +21,23 @@
   </ion-item>
   <ion-item>
     <ion-label fixed>时间</ion-label>
-    <ion-select [(ngModel)]="minute">
+    <ion-select [(ngModel)]="minute" okText="确定" cancelText="取消">
       <ion-option *ngFor="let n of range(121)" [value]="n">{{ n }} 分钟</ion-option>
     </ion-select>
-    <ion-select [(ngModel)]="second">
+    <ion-select [(ngModel)]="second" okText="确定" cancelText="取消">
       <ion-option *ngFor="let n of range(60)" [value]="n">{{ n }} 秒钟</ion-option>
     </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>音效</ion-label>
+    <ion-select [(ngModel)]="sound" okText="确定" cancelText="取消" (ngModelChange)="play($event)">
+      <ion-option *ngFor="let s of sounds" [value]="s.code">{{ s.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)]="vibration" min="100" max="1000" (ngModelChange)="vib($event)">
+      <ion-icon range-left small name="pulse"></ion-icon>
+      <ion-icon range-right name="pulse"></ion-icon>
+    </ion-range>
   </ion-item>
 </ion-content>

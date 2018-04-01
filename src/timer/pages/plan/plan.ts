@@ -22,6 +22,7 @@ import { Loop } from '../../loop';
 export class PlanPage {
   isRun = false
   plan: Plan
+  private isRoot = false;
 
   constructor(
     public navCtrl: NavController,
@@ -30,6 +31,13 @@ export class PlanPage {
     private planProvider: PlanProvider
   ) {
     this.plan = navParams.get('plan')
+    if (!this.plan) {
+      this.isRoot = true
+      this.plan = {
+        name: "计时器",
+        plans: this.planProvider.plans,
+      }
+    }
   }
 
   time(plan: Plan): number {
@@ -64,9 +72,8 @@ export class PlanPage {
   }
 
   add() {
-    this.planProvider.add(this.plan).then(p => {
+    this.planProvider.add(this.plan, this.isRoot).then(p => {
       if (p) {
-        p.parent = this.plan
         this.navCtrl.push(PlanPage, { plan: p })
       }
     })

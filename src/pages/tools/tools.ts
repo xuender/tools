@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { TimerPage } from '../../timer/pages/timer/timer'
+// import { TimerPage } from '../../timer/pages/timer/timer'
+import { SoundPage } from '../../sound/pages/sound/sound'
+import { PlanPage } from '../../timer/pages/plan/plan';
 
 @Component({
   selector: 'page-tools',
@@ -17,6 +19,10 @@ export class ToolsPage {
   }
 
   timer() {
-    this.navCtrl.push(TimerPage)
+    this.navCtrl.push(PlanPage)
+  }
+
+  sound() {
+    this.navCtrl.push(SoundPage)
   }
 }

@@ -5,17 +5,16 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { TimerComponent } from './components/timer/timer'
 import { TimePipe } from './pipes/time/time'
-import { TimerPage } from './pages/timer/timer'
 import { PlanPage } from './pages/plan/plan'
 import { TaskPage } from './pages/task/task'
 import { LoopPage } from './pages/loop/loop'
 import { PlanProvider } from './providers/plan/plan'
+import { SoundModule } from '../sound/sound.module';
 
 @NgModule({
   declarations: [
     TimerComponent,
     TimePipe,
-    TimerPage,
     PlanPage,
     TaskPage,
     LoopPage,
@@ -23,6 +22,7 @@ import { PlanProvider } from './providers/plan/plan'
   imports: [
     HttpClientModule,
     IonicModule,
+    SoundModule,
     IonicStorageModule.forRoot({
       name: 'toolsdb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
@@ -31,7 +31,6 @@ import { PlanProvider } from './providers/plan/plan'
   exports: [
     TimerComponent,
     TimePipe,
-    TimerPage,
     PlanPage,
     TaskPage,
     LoopPage,
@@ -40,7 +39,6 @@ import { PlanProvider } from './providers/plan/plan'
     PlanProvider,
   ],
   entryComponents: [
-    TimerPage,
     PlanPage,
     TaskPage,
     LoopPage,

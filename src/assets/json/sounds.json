@@ -1,0 +1,16 @@
+[{
+    "code": "ding",
+    "path": "ding.wav",
+    "name": "水滴"
+  },
+  {
+    "code": "wrong",
+    "path": "wrong.wav",
+    "name": "错误"
+  },
+  {
+    "code": "doorbell",
+    "path": "doorbell.wav",
+    "name": "门铃"
+  }
+]
