@@ -17,14 +17,26 @@
 <ion-content padding>
   <ion-item>
     <ion-label fixed>名称</ion-label>
-    <ion-input type="text" [(ngModel)]="loop.name"></ion-input>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label fixed>循环位置(0开始)</ion-label>
-    <ion-input type="number" [(ngModel)]="loop.to"></ion-input>
+    <ion-input type="number" [(ngModel)]="to"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label fixed>循环次数</ion-label>
-    <ion-input type="number" [(ngModel)]="loop.count"></ion-input>
+    <ion-input type="number" [(ngModel)]="count"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>音效</ion-label>
+    <ion-select [(ngModel)]="sound" okText="确定" cancelText="取消" (ngModelChange)="play($event)">
+      <ion-option *ngFor="let s of sounds" [value]="s.code">{{ s.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)]="vibration" min="100" max="1000" (ngModelChange)="vib($event)">
+      <ion-icon range-left small name="pulse"></ion-icon>
+      <ion-icon range-right name="pulse"></ion-icon>
+    </ion-range>
   </ion-item>
 </ion-content>

@@ -93,7 +93,7 @@ export class TimerComponent {
   loop(l: Loop) {
     l.num += 1
     if (l.num >= l.count) {
-      l.succeed = true
+      this.item(l)
     } else {
       for (let i = l.to; i < this.plan.items.length; i++) {
         const item = this.plan.items[i]
@@ -104,16 +104,20 @@ export class TimerComponent {
     }
   }
 
+  private item(i: Item) {
+    i.succeed = true
+    if (i.vibration) {
+      this.bgProvider.vibrate(i.vibration)
+    }
+    if (i.sound) {
+      this.bgProvider.playSound(i.sound)
+    }
+  }
+
   task(t: Task) {
     t.num += 1
     if (t.num >= t.time) {
-      t.succeed = true
-      if (t.vibration) {
-        this.bgProvider.vibrate(t.vibration)
-      }
-      if (t.sound) {
-        this.bgProvider.playSound(t.sound)
-      }
+      this.item(t)
     }
   }
 
