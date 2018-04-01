@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
 import { IonicModule, IonicPageModule } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http'
-import { NativeAudio } from '@ionic-native/native-audio'
-import { Vibration } from '@ionic-native/vibration'
 
 import { SoundPage } from './pages/sound/sound';
 import { SoundProvider } from './providers/sound/sound';
+import { BgModule } from '../bg/bg.module';
 
 @NgModule({
   declarations: [
     SoundPage,
   ],
   imports: [
-    HttpClientModule,
     IonicModule,
+    BgModule,
     IonicPageModule.forChild(SoundPage),
   ],
   providers: [
-    NativeAudio,
-    Vibration,
     SoundProvider,
   ],
 })

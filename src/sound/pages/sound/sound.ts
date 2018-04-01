@@ -27,7 +27,7 @@ export class SoundPage {
     try {
       await this.soundProvider.play(sound)
     } catch (error) {
-      console.error(error)
+      console.error('播放失败', error)
     }
     sound.isPlay = false
   }

@@ -4,7 +4,7 @@ import { range } from 'lodash'
 
 import { Task } from '../../task'
 import { Sound } from '../../../sound/sound';
-import { SoundProvider } from '../../../sound/providers/sound/sound';
+import { BgProvider } from '../../../bg/providers/bg/bg';
 /**
  * 任务编辑
  */
@@ -21,14 +21,14 @@ export class TaskPage {
   vibration: number = 0
   constructor(
     private viewCtrl: ViewController,
-    private soundProvider: SoundProvider,
+    private bgProvider: BgProvider,
     navParams: NavParams,
   ) {
     const task = navParams.get('task')
     this.task = task ? task : { name: '未命名的计时任务', time: 60, sound: 'ding' }
     this.second = this.task.time % 60
     this.minute = Math.floor(this.task.time / 60)
-    this.sounds = this.soundProvider.sounds
+    this.sounds = this.bgProvider.sounds
     if (this.task.sound) { this.sound = this.task.sound }
     if (this.task.vibration) { this.vibration = this.task.vibration }
   }
@@ -49,10 +49,10 @@ export class TaskPage {
   }
 
   play(sound: string) {
-    this.soundProvider.play(sound)
+    this.bgProvider.playSound(sound)
   }
 
   vib(time: number) {
-    this.soundProvider.vib(time)
+    this.bgProvider.vibrate(time)
   }
 }

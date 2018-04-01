@@ -9,7 +9,7 @@ import { PlanPage } from './pages/plan/plan'
 import { TaskPage } from './pages/task/task'
 import { LoopPage } from './pages/loop/loop'
 import { PlanProvider } from './providers/plan/plan'
-import { SoundModule } from '../sound/sound.module';
+import { BgModule } from '../bg/bg.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { SoundModule } from '../sound/sound.module';
   imports: [
     HttpClientModule,
     IonicModule,
-    SoundModule,
+    BgModule,
     IonicStorageModule.forRoot({
       name: 'toolsdb',
       driverOrder: ['indexeddb', 'sqlite', 'websql']

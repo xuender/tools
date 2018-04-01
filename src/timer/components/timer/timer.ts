@@ -7,7 +7,7 @@ import { Loop } from '../../loop'
 import { Item, isLoop } from '../../item'
 import { Task } from '../../task'
 import { PlanProvider } from '../../providers/plan/plan';
-import { SoundProvider } from '../../../sound/providers/sound/sound';
+import { BgProvider } from '../../../bg/providers/bg/bg';
 
 /**
  * 计时器
@@ -29,7 +29,7 @@ export class TimerComponent {
   private timer
   constructor(
     private planProvider: PlanProvider,
-    private soundProvider: SoundProvider,
+    private bgProvider: BgProvider,
   ) {
     console.log('Hello TimerComponent Component');
   }
@@ -52,6 +52,7 @@ export class TimerComponent {
   }
 
   play() {
+    this.bgProvider.enable()
     this.init()
     this.run()
   }
@@ -81,7 +82,7 @@ export class TimerComponent {
         this.stop()
       }
     }, 1000)
-    this.soundProvider.vib(100)
+    this.bgProvider.vibrate(100)
   }
 
   loop(l: Loop) {
@@ -103,10 +104,10 @@ export class TimerComponent {
     if (t.num >= t.time) {
       t.succeed = true
       if (t.vibration) {
-        this.soundProvider.vib(t.vibration)
+        this.bgProvider.vibrate(t.vibration)
       }
       if (t.sound) {
-        this.soundProvider.play(t.sound)
+        this.bgProvider.playSound(t.sound)
       }
     }
   }
@@ -115,10 +116,11 @@ export class TimerComponent {
     this.ifRun = true
     this.ifPause = false
     if (this.timer) { clearInterval(this.timer) }
-    this.soundProvider.vib(100)
+    this.bgProvider.vibrate(100)
   }
 
   stop() {
+    this.bgProvider.disable()
     this.isRun.emit(false)
     this.ifPlay = true
     this.ifRun = false
@@ -128,7 +130,7 @@ export class TimerComponent {
     if (this.timer) { clearInterval(this.timer) }
     this.time = 0
     this.init()
-    this.soundProvider.vib(100)
+    this.bgProvider.vibrate(100)
   }
 
   updateItem(item: Item, slidingItem: ItemSliding) {
