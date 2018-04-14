@@ -3,6 +3,7 @@ import {
   NavController,
   NavParams,
   ItemSliding,
+  reorderArray,
   // ModalController
 } from 'ionic-angular'
 import { sum } from 'lodash'
@@ -20,6 +21,7 @@ import { Loop } from '../../loop';
   templateUrl: 'plan.html',
 })
 export class PlanPage {
+  reorder = false
   isRun = false
   plan: Plan
   private isRoot = false;
@@ -96,5 +98,18 @@ export class PlanPage {
     plan.parent = this.plan
     this.planProvider.removePlan(plan)
     slidingItem.close();
+  }
+
+  reorderItems(indexes: { from: number, to: number }) {
+    reorderArray(this.plan.plans, indexes)
+  }
+
+  reorderStart() {
+    this.reorder = true
+  }
+
+  reorderEnd() {
+    this.reorder = false
+    this.planProvider.save()
   }
 }

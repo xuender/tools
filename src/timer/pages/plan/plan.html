@@ -5,7 +5,13 @@
     </button>
     <ion-title>{{ plan.name }}{{ plan.parent ? '/'+plan.parent.name : '' }}</ion-title>
     <ion-buttons end>
-      <button ion-button [disabled]="isRun" (click)="add()">
+      <button ion-button *ngIf="ifPlan && !reorder" (click)="reorderStart()">
+        <ion-icon name="reorder"></ion-icon>
+      </button>
+      <button ion-button *ngIf="ifPlan && reorder" (click)="reorderEnd()">
+        确定
+      </button>
+      <button ion-button [disabled]="isRun" *ngIf="!reorder" (click)="add()">
         <ion-icon name="add"></ion-icon>
         增加
       </button>
@@ -14,7 +20,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngIf="ifPlan">
+  <ion-list *ngIf="ifPlan" [reorder]="reorder" (ionItemReorder)="reorderItems($event)">
     <ion-item-sliding *ngFor="let p of plan.plans" #slidingItem>
       <button ion-item menuClose (click)="openPlan(p)">
         <ion-icon name="stopwatch" item-start></ion-icon>

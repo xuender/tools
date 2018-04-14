@@ -6,8 +6,8 @@ export class LoopRun {
   private num = 0
   private intervalTimer: any
   /**
-   * @param millisec 间隔毫秒
    * @param runnable 循环执行的函数
+   * @param millisec 间隔毫秒
    * @param count 循环次数,默认-1不停止
    */
   constructor(
