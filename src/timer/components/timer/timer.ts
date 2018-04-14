@@ -8,6 +8,7 @@ import { Item, isLoop } from '../../item'
 import { Task } from '../../task'
 import { PlanProvider } from '../../providers/plan/plan';
 import { BgProvider } from '../../../bg/providers/bg/bg';
+import { LoopRun } from '../../../utils'
 
 /**
  * 计时器
@@ -27,12 +28,33 @@ export class TimerComponent {
 
   private _plan: Plan
   private tplan: Plan
-  private timer
+  private loopRun: LoopRun
   constructor(
     private planProvider: PlanProvider,
     private bgProvider: BgProvider,
   ) {
     console.log('Hello TimerComponent Component');
+    this.loopRun = new LoopRun(l => {
+      this.time += 1
+      let end = true
+      for (const i of this.plan.items) {
+        if (!i.succeed) {
+          end = false
+          if (isLoop(i)) {
+            this.loop(i as Loop)
+          } else {
+            this.task(i as Task)
+          }
+          break
+        }
+      }
+      if (end) {
+        this.stop()
+        this.tplan.tally = this.tplan.tally ? this.tplan.tally + 1 : 1
+        console.log('save', this.plan.tally)
+        this.planProvider.save()
+      }
+    })
   }
 
   @Input() set plan(p: Plan) {
@@ -66,27 +88,7 @@ export class TimerComponent {
     this.ifPause = true
     this.ifStop = true
     this.ifCancel = false
-    this.timer = setInterval(() => {
-      this.time += 1
-      let end = true
-      for (const i of this.plan.items) {
-        if (!i.succeed) {
-          end = false
-          if (isLoop(i)) {
-            this.loop(i as Loop)
-          } else {
-            this.task(i as Task)
-          }
-          break
-        }
-      }
-      if (end) {
-        this.stop()
-        this.tplan.tally = this.tplan.tally ? this.tplan.tally + 1 : 1
-        console.log('save', this.plan.tally)
-        this.planProvider.save()
-      }
-    }, 1000)
+    this.loopRun.run()
     this.bgProvider.vibrate(100)
   }
 
@@ -124,7 +126,7 @@ export class TimerComponent {
   pause() {
     this.ifRun = true
     this.ifPause = false
-    if (this.timer) { clearInterval(this.timer) }
+    this.loopRun.stop()
     this.bgProvider.vibrate(100)
   }
 
@@ -136,7 +138,7 @@ export class TimerComponent {
     this.ifPause = false
     this.ifStop = false
     this.ifCancel = true
-    if (this.timer) { clearInterval(this.timer) }
+    this.loopRun.stop()
     this.time = 0
     this.init()
     this.bgProvider.vibrate(100)
